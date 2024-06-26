@@ -82,6 +82,7 @@ tolerations: []
 affinity: {}
 
 api:
+  loglevel: warn
   config:
     # Default tenant config
     id: ""

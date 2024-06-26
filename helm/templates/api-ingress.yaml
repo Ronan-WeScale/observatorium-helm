@@ -38,7 +38,7 @@ spec:
               service:
                 name: {{ include "observatorium.resourceName" (dict "ctx" $ "component" "api") }}
                 port:
-                  number: {{ $.Values.service.port }}
+                  number: 8080
           {{- end }}
     {{- end }}
 {{- end -}}

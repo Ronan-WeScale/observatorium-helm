@@ -35,7 +35,7 @@ spec:
       - args:
         - --web.listen=0.0.0.0:8080
         - --web.internal.listen=0.0.0.0:8081
-        - --log.level=debug
+        - --log.level={{ .Values.api.loglevel }}
         {{- if .Values.logs.enabled }}
         - --logs.read.endpoint={{ .Values.logs.read.endpoint }}
         - --logs.tail.endpoint={{ .Values.logs.tail.endpoint }}

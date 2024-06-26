@@ -3,12 +3,12 @@ entries:
   observatorium:
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-06-25T16:36:11.824081+02:00"
+    created: "2024-06-26T09:21:45.51506+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
-    digest: b999bf10de1288c3eddda34aa0a6e3c5f2e7af08121adf3e2c6e38dfd6027810
+    digest: f1f64b5cfa77db00fa0d53ad31439426bdb93cb5731c82d9e6f46d324764add9
     name: observatorium
     type: application
     urls:
     - observatorium-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-25T16:36:11.822955+02:00"
+generated: "2024-06-26T09:21:45.514328+02:00"
