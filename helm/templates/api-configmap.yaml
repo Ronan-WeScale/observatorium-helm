@@ -20,7 +20,7 @@ data:
       "roles":
       - "read-{{ $tenant.name }}"
       "subjects":
-      {{- range $group := .Values.api.config.groups }}
+      {{- range $group := $tenant.groups }}
       - "kind": "group"
         "name": {{ $group | quote }}
       {{- end }}
