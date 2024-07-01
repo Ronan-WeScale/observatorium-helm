@@ -71,6 +71,10 @@ spec:
           name: internal
         - containerPort: 8080
           name: public
+        {{- with .Values.extraEnv }}
+        env:
+          {{- toYaml . | nindent 12 }}
+        {{- end }}
         readinessProbe:
           failureThreshold: 12
           httpGet:
