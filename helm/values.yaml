@@ -94,6 +94,9 @@ api:
     issuerURL: ""
     usernameClaim: ""
     groupClaim: ""
+    customCA:
+      enabled: false
+      cert: ""
 
 metrics:
   enabled: false
