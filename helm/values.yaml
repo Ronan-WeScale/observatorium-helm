@@ -96,7 +96,9 @@ api:
     groupClaim: ""
     customCA:
       enabled: false
-      cert: ""
+      cert: |
+        -----BEGIN CERTIFICATE-----
+        -----END CERTIFICATE-----
 
 metrics:
   enabled: false
