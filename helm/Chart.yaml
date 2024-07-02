@@ -4,6 +4,6 @@ description: A Helm chart to deploy Observatorium API on kubernetes
 
 type: application
 
-version: 0.2.1
+version: 0.2.2
 
 appVersion: "main-2023-04-05-v0.1.2-366-g2761e0f"
