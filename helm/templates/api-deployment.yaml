@@ -93,10 +93,12 @@ spec:
           name: tenants
           readOnly: true
           subPath: tenants.yaml
+        {{- if .Values.api.config.customCA.enabled }}
         - mountPath: /etc/observatorium/ca.crt
           name: ca
           readOnly: true
           subPath: ca.crt
+        {{- end }}
       volumes:
       - configMap:
           name: {{ include "observatorium.resourceName" (dict "ctx" $ "component" "api") }}
@@ -104,9 +106,11 @@ spec:
       - name: tenants
         secret:
           secretName: {{ include "observatorium.resourceName" (dict "ctx" $ "component" "api") }}
+      {{- if .Values.api.config.customCA.enabled }}
       - name: ca
         secret:
           secretName: {{ include "observatorium.resourceName" (dict "ctx" $ "component" "api") }}-crt
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
