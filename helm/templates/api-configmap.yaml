@@ -15,7 +15,7 @@ data:
       - "kind": "group"
         "name": {{ $group | quote }}
       {{- end }}
-    {{- range $tenant := .Values.tenants }}
+    {{- range $tenant := default .Values.tenants $.Values.global.tenants }}
     - "name": {{ $tenant.name | quote }}
       "roles":
       - "read-{{ $tenant.name }}"
@@ -35,7 +35,7 @@ data:
       - "traces"
       "tenants":
       - {{ .Values.api.config.id }}
-    {{- range $tenant := .Values.tenants }}
+    {{- range $tenant := default .Values.tenants $.Values.global.tenants }}
     - "name": "read-{{ $tenant.name }}"
       "permissions":
       - "read"
