@@ -17,10 +17,11 @@ spec:
       maxUnavailable: 1
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
+      {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
+        {{- include "observatorium.config.checksum" . | nindent 8 }}
       labels:
         {{- include "observatorium.labels" (dict "ctx" $ "component" "api" ) | nindent 8 }}
     spec:

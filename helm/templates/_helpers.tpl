@@ -89,3 +89,7 @@ Create the name of the service account to use
 {{- end -}}
 {{- $section | toYaml -}}
 {{- end -}}
+
+{{- define "observatorium.config.checksum" -}}
+checksum/config: {{ include (print .Template.BasePath "/api-configmap.yaml") . | sha256sum }}
+{{- end -}}
