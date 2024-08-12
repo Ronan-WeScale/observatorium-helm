@@ -46,6 +46,7 @@ spec:
         {{- end }}
         {{- end }}
         {{- if .Values.metrics.enabled }}
+        - --metrics.tenant-header={{ .Values.metrics.tenantHeader }}
         - --metrics.read.endpoint={{ .Values.metrics.read.endpoint }}
         - --metrics.write.endpoint={{ .Values.metrics.write.endpoint }}
         - --metrics.rules.endpoint={{ .Values.metrics.rules.endpoint }}

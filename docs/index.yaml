@@ -3,7 +3,17 @@ entries:
   observatorium:
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.813096+02:00"
+    created: "2024-08-12T09:22:43.861602+02:00"
+    description: A Helm chart to deploy Observatorium API on kubernetes
+    digest: 092b131c03b7f09121aef1279cafa30c0cc8eeb583bfa1d4d234ab704b7da1a5
+    name: observatorium
+    type: application
+    urls:
+    - observatorium-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
+    created: "2024-08-12T09:22:43.861173+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 41358eccb438118894ab6cda3b535f791dd31aafcbda5b8169ecd7825e785b54
     name: observatorium
@@ -13,7 +23,7 @@ entries:
     version: 0.2.6
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.812654+02:00"
+    created: "2024-08-12T09:22:43.860747+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: fb4b005c497f2e3570ebf8e60cb297fced92277027cdfb2742a02d8cee6506cc
     name: observatorium
@@ -23,7 +33,7 @@ entries:
     version: 0.2.5
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.811281+02:00"
+    created: "2024-08-12T09:22:43.860317+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 3790e947df6ce1efece5a4eae7140d18231a42fed15bbcacc30e2a08bbdf0859
     name: observatorium
@@ -33,7 +43,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.81071+02:00"
+    created: "2024-08-12T09:22:43.859896+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 816b992407bb90ca50cefa5d58388ac93d7adbf74ceb6d4194818e1f94764c45
     name: observatorium
@@ -43,7 +53,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.810101+02:00"
+    created: "2024-08-12T09:22:43.859484+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: e1a37cb53c16b806a40c0d03c0ccf43817bb0f809f0a6abe9821ab3a52e911d8
     name: observatorium
@@ -53,7 +63,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.809486+02:00"
+    created: "2024-08-12T09:22:43.859041+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: fd0c0b339eb7fcfbe814e8542c75b8083add0f72edeaec2dc2583b360571b16a
     name: observatorium
@@ -63,7 +73,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.808872+02:00"
+    created: "2024-08-12T09:22:43.858631+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 08ba0afb07576a444fce0d9c2d7ca38aead1ccf26f4030deb2f169c9cdc9dadb
     name: observatorium
@@ -73,7 +83,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.808245+02:00"
+    created: "2024-08-12T09:22:43.858224+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 493e03320263650fc285228a080eea9175d27f03d135099da43802fcfdcc30e0
     name: observatorium
@@ -83,7 +93,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.807621+02:00"
+    created: "2024-08-12T09:22:43.857794+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: a31ebc1e3cc1490d9ef73e5a569243d9ff86d3e5ffeb2dfc375fe47a3bde55ef
     name: observatorium
@@ -93,7 +103,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.806983+02:00"
+    created: "2024-08-12T09:22:43.857388+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 2ad0846327283f41b77e3483b21599dc8655d66c30f2bdc0b5ea0fc0281992d2
     name: observatorium
@@ -103,7 +113,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.806235+02:00"
+    created: "2024-08-12T09:22:43.856987+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 865961e2f729086921a125fd22120bbe51e726aa57dd4c66297929fac28e0981
     name: observatorium
@@ -113,7 +123,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: main-2023-04-05-v0.1.2-366-g2761e0f
-    created: "2024-08-07T11:00:58.805505+02:00"
+    created: "2024-08-12T09:22:43.856552+02:00"
     description: A Helm chart to deploy Observatorium API on kubernetes
     digest: 43f05d8f8894e3d16375b8a3a978968a05749bf9f6cd9a799ec4eb5994240c73
     name: observatorium
@@ -121,4 +131,4 @@ entries:
     urls:
     - observatorium-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-07T11:00:58.804551+02:00"
+generated: "2024-08-12T09:22:43.856025+02:00"

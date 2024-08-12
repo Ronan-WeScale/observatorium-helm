@@ -103,6 +103,7 @@ api:
 
 metrics:
   enabled: false
+  tenantHeader: ""
   read:
     endpoint: ""
   write:
