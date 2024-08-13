@@ -130,6 +130,8 @@ traces:
     endpoint: ""
   rules:
     endpoint: ""
+  alertmanager:
+    endpoint: ""
 
 rate_limiter:
   enabled: false

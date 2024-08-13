@@ -50,6 +50,7 @@ spec:
         - --metrics.read.endpoint={{ .Values.metrics.read.endpoint }}
         - --metrics.write.endpoint={{ .Values.metrics.write.endpoint }}
         - --metrics.rules.endpoint={{ .Values.metrics.rules.endpoint }}
+        - --metrics.alertmanager.endpoint={{ .Values.metrics.alertmanager.endpoint }}
         {{- end }}
         - --rbac.config=/etc/observatorium/rbac.yaml
         - --tenants.config=/etc/observatorium/tenants.yaml
