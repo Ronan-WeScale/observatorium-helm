@@ -16,9 +16,15 @@ data:
         "name": {{ $group | quote }}
       {{- end }}
     {{- range $tenant := default .Values.tenants $.Values.global.tenants }}
+    {{- if hasKey $tenant "type" }}
+    - "name": {{ printf "%s-%s" $tenant.type $tenant.name | quote }}
+      "roles":
+      - "read-{{ printf "%s-%s" $tenant.type $tenant.name }}"
+    {{- else }}
     - "name": {{ $tenant.name | quote }}
       "roles":
       - "read-{{ $tenant.name }}"
+    {{- end }}
       "subjects":
       {{- range $group := $tenant.groups }}
       - "kind": "group"
@@ -36,7 +42,11 @@ data:
       "tenants":
       - {{ .Values.api.config.id }}
     {{- range $tenant := default .Values.tenants $.Values.global.tenants }}
+    {{- if hasKey $tenant "type" }}
+    - "name": "read-{{ printf "%s-%s" $tenant.type $tenant.name }}"
+    {{- else }}
     - "name": "read-{{ $tenant.name }}"
+    {{- end }}
       "permissions":
       - "read"
       "resources":
@@ -44,5 +54,9 @@ data:
       - "metrics"
       - "traces"
       "tenants":
+      {{- if hasKey $tenant "type" }}
+      - {{ printf "%s-%s" $tenant.type $tenant.name | quote }}
+      {{- else }}
       - {{ $tenant.name | quote }}
+      {{- end }}
     {{- end }}
