@@ -15,7 +15,7 @@ data:
       - "kind": "group"
         "name": {{ $group | quote }}
       {{- end }}
-    {{- range $project := default .Values.projects }}
+    {{- range $project := default .Values.projects .Values.global.projects }}
     {{- range $env, $val := $project.envs }}
     - "name": {{ printf "%s-%s" $env $project.projectName | quote }}
       "roles":
@@ -37,7 +37,7 @@ data:
       - "traces"
       "tenants":
       - {{ .Values.api.config.id }}
-    {{- range $project := default .Values.projects }}
+    {{- range $project := default .Values.projects .Values.global.projects }}
     {{- range $env, $val := $project.envs }}
     - "name": "read-{{ printf "%s-%s" $env $project.projectName }}"
       "permissions":
