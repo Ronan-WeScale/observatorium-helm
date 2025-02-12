@@ -1,9 +1,3 @@
-# Default values for observatorium-api.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-global:
-  tenants: []
-
 replicaCount: 1
 extraEnv: []
 
@@ -136,6 +130,20 @@ traces:
 rate_limiter:
   enabled: false
 
-tenants: []
-  # - name: tenant-1
-  #   groups: ["/tenant-1/ro","/tenant-1/rw"]
+projects: {}
+  # projectID-XXXXX:
+  #   projectName: my-project 
+  #   envs:
+  #     prod:
+  #       groups:
+  #         - /xyz/grafana/key
+  #         - /xyz/grafana/key
+  #       tenants:
+  #         prod-my-tenant1:
+  #     hprod:
+  #       groups:
+  #         - /xyz/grafana/key
+  #         - /xyz/grafana/key
+  #       tenants:
+  #         hprod-my-tenant1:
+  #         hprod-my-tenant2:

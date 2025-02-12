@@ -15,21 +15,17 @@ data:
       - "kind": "group"
         "name": {{ $group | quote }}
       {{- end }}
-    {{- range $tenant := default .Values.tenants $.Values.global.tenants }}
-    {{- if hasKey $tenant "type" }}
-    - "name": {{ printf "%s-%s" $tenant.type $tenant.name | quote }}
+    {{- range $project := default .Values.projects }}
+    {{- range $env, $val := $project.envs }}
+    - "name": {{ printf "%s-%s" $env $project.projectName | quote }}
       "roles":
-      - "read-{{ printf "%s-%s" $tenant.type $tenant.name }}"
-    {{- else }}
-    - "name": {{ $tenant.name | quote }}
-      "roles":
-      - "read-{{ $tenant.name }}"
-    {{- end }}
+      - "read-{{ printf "%s-%s" $env $project.projectName }}"
       "subjects":
-      {{- range $group := $tenant.groups }}
+      {{- range $group := $val.groups }}
       - "kind": "group"
         "name": {{ $group | quote }}
       {{- end }}
+    {{- end }}
     {{- end }}
     "roles":
     - "name": "read-{{ .Values.api.config.id }}"
@@ -41,12 +37,9 @@ data:
       - "traces"
       "tenants":
       - {{ .Values.api.config.id }}
-    {{- range $tenant := default .Values.tenants $.Values.global.tenants }}
-    {{- if hasKey $tenant "type" }}
-    - "name": "read-{{ printf "%s-%s" $tenant.type $tenant.name }}"
-    {{- else }}
-    - "name": "read-{{ $tenant.name }}"
-    {{- end }}
+    {{- range $project := default .Values.projects }}
+    {{- range $env, $val := $project.envs }}
+    - "name": "read-{{ printf "%s-%s" $env $project.projectName }}"
       "permissions":
       - "read"
       "resources":
@@ -54,9 +47,8 @@ data:
       - "metrics"
       - "traces"
       "tenants":
-      {{- if hasKey $tenant "type" }}
-      - {{ printf "%s-%s" $tenant.type $tenant.name | quote }}
-      {{- else }}
-      - {{ $tenant.name | quote }}
+      {{- range $tenant, $val := $val.tenants }}
+      - {{ $tenant | quote }}
       {{- end }}
+    {{- end }}
     {{- end }}
