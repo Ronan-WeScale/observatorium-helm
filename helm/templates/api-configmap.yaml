@@ -48,7 +48,7 @@ data:
       - "traces"
       "tenants":
       {{- range $tenant, $val := $val.tenants }}
-      - {{ $tenant | quote }}
+      - {{ printf "%s-%s" $env $tenant | quote }}
       {{- end }}
     {{- end }}
     {{- end }}
